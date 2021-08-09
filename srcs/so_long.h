@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nlafarge <nlafarge@42.student.fr>          +#+  +:+       +#+        */
+/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 16:49:01 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/05 05:57:25 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/05 15:42:30 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@
 # define TILE_NB 15
 # define TILE_NB_DIVIDED 7
 
-typedef struct s_img
+typedef struct 	s_img
 {
 	void	*img;
 	char	*addr;
@@ -66,7 +66,7 @@ typedef struct s_mlx
 	void	*win;
 }				t_mlx;
 
-typedef struct s_file
+typedef struct 	s_file
 {
 	char	*name;
 	int		fd;
@@ -74,7 +74,7 @@ typedef struct s_file
 	char	*line;
 }				t_file;
 
-typedef struct s_texture
+typedef struct 	s_texture
 {
 	int		width;
 	int		height;
@@ -82,7 +82,7 @@ typedef struct s_texture
 	void	*img;
 }				t_texture;
 
-typedef struct s_player
+typedef struct 	s_player
 {
 	size_t		nb;
 	int			x;
@@ -94,19 +94,19 @@ typedef struct s_player
 	t_texture	texture;
 }				t_player;
 
-typedef struct s_exit
+typedef struct 	s_exit
 {
 	size_t		nb;
 	t_texture	texture;
 }				t_exit;
 
-typedef struct s_collectible
+typedef struct 	s_collectible
 {
 	size_t		nb;
 	t_texture	texture;
 }				t_collectible;
 
-typedef struct s_map
+typedef struct 	s_map
 {
 	size_t		x;
 	size_t		y;
@@ -116,7 +116,7 @@ typedef struct s_map
 	t_texture	floor;
 }				t_map;
 
-typedef struct s_frame
+typedef struct 	s_frame
 {
 	int	x;
 	int	y;
@@ -124,7 +124,7 @@ typedef struct s_frame
 	int	cur_y;
 }				t_frame;
 
-typedef struct s_solong
+typedef struct 	s_solong
 {
 	t_file			file;
 	t_map			map;
